@@ -17,6 +17,7 @@ calculate.addEventListener("click", function() {
     var activity_value = e.options[e.selectedIndex].value;
 
     var kilo_weight = weight / 2.2
+    final_height_cm = final_height_inches * 2.54
     var age = document.getElementById("kbmr-age").value;
     var gender = document.getElementById("kbmr-gender").value;
 
@@ -73,9 +74,10 @@ calculate.addEventListener("click", function() {
         var total_daily_calorie_needs = men_bmr * activity_value
         document.getElementById("total_calories").innerHTML = '<strong><u>' + total_daily_calorie_needs.toFixed(2) + `</u></strong> calories/day`
     } else {
-        console.log("woman executing")
-        total_daily_calorie_needs = 447.593 + (9.247 * kilo_weight) + (3.098 * final_height_cm) - (4.330 * age)
-        document.getElementById("total_calories").innerHTML = '<strong><u>' + parseFloat(woman_bmr_formula).toFixed(2) + `</u></strong> calories/day`
+        var women_bmr = 447.593 + (9.247 * kilo_weight) + (3.098 * final_height_cm) - (4.330 * age)
+        console.log(women_bmr);
+        var total_daily_calorie_needs = women_bmr * activity_value
+        document.getElementById("total_calories").innerHTML = '<strong><u>' + total_daily_calorie_needs.toFixed(2) + `</u></strong> calories/day`
     }
 
 
