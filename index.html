@@ -90,11 +90,15 @@
         background-color: #00000069 !important;
         border-color: #d607ac !important;
     }
+    
+    #header {
+        font-size: 5vh;
+    }
 </style>
 
 <body>
     <div>
-        <h1>Health tracker</h1>
+        <h1 id="header">Health tracker</h1>
         <input type="text" placeholder="Age *" class="form-control " id="kbmr-age">
         <select class="form-control" id="kbmr-gender" required="" value="Male">
             <option >Gender *</option>
@@ -103,7 +107,7 @@
         </select>
 
         <select name="activity" id="activity" class="btn btn-success">    
-            <option value="1.2">No sport/exercise</option>
+            <option id="t-42" value="1.2">No sport/exercise</option>
             <option value="1.375">Light activity (sport 1-3 times per week)</option>
             <option value="1.55">Moderate activity (sport 3-5 times per week)</option>
             <option value="1.725">High activity (everyday exercise)</option>
@@ -124,13 +128,9 @@
         </label>
     </div>
 
-    <!-- <div id="other-app">
-        <input type="text" placeholder="desired weight" id="desired_weight" value="150">
-        <br>
-        <input type="text" placeholder="amount of days" id="amount_days" value="30">
-        <br>
 
-    </div> -->
+
+    </div>
     <div>
         <button id="calculate" class="btn btn-outline-success my-2 my-lg-0">Calculate</button>
     </div>

@@ -1,6 +1,6 @@
 document.getElementById("output-container").style.padding = "0px";
 document.getElementById("bmi_result").style.padding = "0px";
-
+console.log(document.getElementById("activity").value)
 
 calculate.addEventListener("click", function() {
     const amount_decimals = 3;
@@ -9,20 +9,12 @@ calculate.addEventListener("click", function() {
     var height_feet = document.getElementById("height_feet").value;
     var height_inches = document.getElementById("height_inches").value;
 
-    final_height_inches = parseFloat(height_feet) * 12 + parseFloat(height_inches);
+    var final_height_inches = parseFloat(height_feet) * 12 + parseFloat(height_inches);
+    var bmi_formula = (weight / (final_height_inches * final_height_inches)) * 703;
 
-    bmi_formula = (weight / (final_height_inches * final_height_inches)) * 703;
-
-    document.getElementById("total_calories").style.padding = "10px";
 
     var e = document.getElementById("activity");
     var activity_value = e.options[e.selectedIndex].value;
-
-    var desired_weight = document.getElementById("desired_weight").value;
-    var amount_days = document.getElementById("amount_days").value;
-
-    var weight_difference = desired_weight - weight;
-    var daily_caloric_intake = weight_difference * amount_days;
 
     var kilo_weight = weight / 2.2
     var age = document.getElementById("kbmr-age").value;
@@ -87,7 +79,7 @@ calculate.addEventListener("click", function() {
     }
 
 
-
+    document.getElementById("total_calories").style.padding = "10px";
     kbmr_gender = document.getElementById("kbmr-gender").value
 
 });
