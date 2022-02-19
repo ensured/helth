@@ -21,12 +21,6 @@ calculate.addEventListener("click", function() {
     var age = document.getElementById("kbmr-age").value;
     var gender = document.getElementById("kbmr-gender").value;
 
-    // let no_activity = bmi_formula * 1.2
-    // let light_activity = bmi_formula * 1.375
-    // let moderate_activity = bmi_formula * 1.55
-    // let high_activity = bmi_formula * 1.725
-    // let extreme_activity = bmi_formula * 1.9
-
     if (bmi_formula < 18.5) {
         bmi_result.innerHTML = `Underweight<br>Current BMI: ${parseFloat(bmi_formula).toFixed(amount_decimals)}`;
         bmi_result.style.fontSize = "40px";
@@ -67,7 +61,6 @@ calculate.addEventListener("click", function() {
 
 
 
-
     if (gender == "Male") {
         let men_bmr = 66 + (6.3 * weight) + (12.9 * final_height_inches) - (6.8 * age)
         console.log(men_bmr);
@@ -79,7 +72,6 @@ calculate.addEventListener("click", function() {
         var total_daily_calorie_needs = women_bmr * activity_value
         document.getElementById("total_calories").innerHTML = '<strong><u>' + total_daily_calorie_needs.toFixed(2) + `</u></strong> calories/day`
     }
-
 
     document.getElementById("total_calories").style.padding = "10px";
     kbmr_gender = document.getElementById("kbmr-gender").value
