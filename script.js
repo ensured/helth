@@ -40,25 +40,6 @@ calculate.addEventListener("click", function() {
         document.getElementById("bmi_result").style.color = "#FFFFFF";
     }
 
-    function kbmr() {
-        if (activity_value == "0.2") {
-            let total_calories_per_day = activity_value + daily_caloric_intake
-            return total_calories_per_day;
-        } else if (activity_value == "1.375") {
-            let total_calories_per_day = activity_value + daily_caloric_intake
-            return total_calories_per_day;
-        } else if (activity_value == "1.55") {
-            let total_calories_per_day = activity_value + daily_caloric_intake
-            return total_calories_per_day;
-        } else if (activity_value == "1.725") {
-            let total_calories_per_day = activity_value + daily_caloric_intake
-            return total_calories_per_day;
-        } else if (activity_value == "1.9") {
-            let total_calories_per_day = activity_value + daily_caloric_intake
-            return total_calories_per_day;
-        }
-    }
-
 
 
     if (gender == "Male") {
